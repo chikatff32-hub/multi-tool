@@ -971,8 +971,8 @@
                         </div>
                         <h4 class="tool-name">${tool.name}</h4>
                         <p class="tool-description">${tool.description}</p>
+                    <a href="${tool.link || '#'}" class="tool-btn">Open</a>
                     `;
-                    
                     // Add animation delay based on position
                     const index = categoryTools.indexOf(tool);
                     toolCard.style.animationDelay = `${index * 0.05}s`;
