@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MegaTools AI — AI Writer Tools (Static)</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-start:#7c3aed;
+      --accent-end:#06b6d4;
+      --shadow: 0 6px 18px rgba(17,24,39,0.06);
+      --radius:12px;
+      --gap:18px;
+      --max-width:1100px;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 40%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    header h1{
+      margin:0;
+      font-size:1.6rem;
+      letter-spacing:-0.2px;
+    }
+    header p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:0.96rem;
+    }
+
+    .tools-section{
+      background: linear-gradient(180deg, rgba(124,58,237,0.06), rgba(6,182,212,0.03));
+      padding:20px;
+      border-radius:18px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:16px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:1.12rem;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:var(--gap);
+    }
+    @media (min-width:640px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width:1000px){
+      .grid{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:16px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      border:1px solid rgba(15,23,42,0.03);
+    }
+    .card:focus-within,
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(17,24,39,0.08);
+    }
+
+    .icon{
+      width:56px;
+      height:56px;
+      min-width:56px;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(135deg,var(--accent-start),var(--accent-end));
+      color:white;
+      flex-shrink:0;
+      font-weight:700;
+      font-size:1.05rem;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.12);
+    }
+
+    .card-body{
+      flex:1 1 auto;
+      min-width:0;
+    }
+    .card-title{
+      margin:0;
+      font-size:1rem;
+      line-height:1.1;
+    }
+    .card-desc{
+      margin:6px 0 12px;
+      color:var(--muted);
+      font-size:0.92rem;
+    }
+
+    .card-actions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:transparent;
+      border: 1px solid rgba(15,23,42,0.08);
+      padding:8px 12px;
+      font-size:0.92rem;
+      border-radius:10px;
+      text-decoration:none;
+      color:#0f172a;
+      cursor:pointer;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg,var(--accent-start),var(--accent-end));
+      color:#fff;
+      border: none;
+    }
+    .btn:focus{ outline:3px solid rgba(6,182,212,0.18); outline-offset:2px; }
+
+    /* small helper */
+    .small-muted{ font-size:0.82rem; color:var(--muted); margin-top:10px; }
+
+    /* Footer note */
+    footer{ margin-top:18px; text-align:center; color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>All Tools — AI Writer Category</h1>
+      <p>Static HTML tool cards. No JavaScript. Responsive grid with 10 AI writing tools.</p>
+    </header>
+
+    <section class="tools-section" aria-labelledby="tools-heading">
+      <div class="section-title">
+        <div>
+          <h2 id="tools-heading">AI Writer Tools</h2>
+          <p class="small-muted">10 essential writing utilities — click Open (placeholder) to use.</p>
+        </div>
+        <div aria-hidden="true" style="color:var(--muted); font-size:0.85rem;">100+ tools → add to main site</div>
+      </div>
+
+      <div class="grid" role="list">
+        <!-- 1 -->
+        <article class="card" role="listitem" aria-label="AI Writer">
+          <div class="icon" aria-hidden="true">AI</div>
+          <div class="card-body">
+            <h3 class="card-title">AI Writer</h3>
+            <p class="card-desc">Generate full articles from minimal prompts.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open AI Writer">Open</a>
+              <a class="btn" href="#" aria-label="AI Writer details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="card" role="listitem" aria-label="Grammar Checker">
+          <div class="icon" aria-hidden="true">G</div>
+          <div class="card-body">
+            <h3 class="card-title">Grammar Checker</h3>
+            <p class="card-desc">Correct grammar, punctuation and style suggestions.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Grammar Checker">Open</a>
+              <a class="btn" href="#" aria-label="Grammar Checker details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card" role="listitem" aria-label="Paraphraser">
+          <div class="icon" aria-hidden="true">P</div>
+          <div class="card-body">
+            <h3 class="card-title">Paraphraser</h3>
+            <p class="card-desc">Reword text while keeping the original meaning.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Paraphraser">Open</a>
+              <a class="btn" href="#" aria-label="Paraphraser details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card" role="listitem" aria-label="Text Summarizer">
+          <div class="icon" aria-hidden="true">S</div>
+          <div class="card-body">
+            <h3 class="card-title">Text Summarizer</h3>
+            <p class="card-desc">Create short summaries from long documents.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Text Summarizer">Open</a>
+              <a class="btn" href="#" aria-label="Text Summarizer details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card" role="listitem" aria-label="Article Generator">
+          <div class="icon" aria-hidden="true">AG</div>
+          <div class="card-body">
+            <h3 class="card-title">Article Generator</h3>
+            <p class="card-desc">Produce SEO-optimized articles from outlines.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Article Generator">Open</a>
+              <a class="btn" href="#" aria-label="Article Generator details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card" role="listitem" aria-label="Story Generator">
+          <div class="icon" aria-hidden="true">ST</div>
+          <div class="card-body">
+            <h3 class="card-title">Story Generator</h3>
+            <p class="card-desc">Create short stories with tone and characters.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Story Generator">Open</a>
+              <a class="btn" href="#" aria-label="Story Generator details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="card" role="listitem" aria-label="Tone Changer">
+          <div class="icon" aria-hidden="true">T</div>
+          <div class="card-body">
+            <h3 class="card-title">Tone Changer</h3>
+            <p class="card-desc">Adjust tone: formal, casual, friendly, persuasive.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Tone Changer">Open</a>
+              <a class="btn" href="#" aria-label="Tone Changer details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="card" role="listitem" aria-label="Resume Writer">
+          <div class="icon" aria-hidden="true">R</div>
+          <div class="card-body">
+            <h3 class="card-title">Resume Writer</h3>
+            <p class="card-desc">Generate professional resumes from prompts.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Resume Writer">Open</a>
+              <a class="btn" href="#" aria-label="Resume Writer details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="card" role="listitem" aria-label="Email Writer">
+          <div class="icon" aria-hidden="true">E</div>
+          <div class="card-body">
+            <h3 class="card-title">Email Writer</h3>
+            <p class="card-desc">Craft emails: outreach, follow-up, formal replies.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Email Writer">Open</a>
+              <a class="btn" href="#" aria-label="Email Writer details">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="card" role="listitem" aria-label="Blog Outline Generator">
+          <div class="icon" aria-hidden="true">BO</div>
+          <div class="card-body">
+            <h3 class="card-title">Blog Outline Generator</h3>
+            <p class="card-desc">Create structured blog outlines and headings.</p>
+            <div class="card-actions">
+              <a class="btn primary" href="#" aria-label="Open Blog Outline Generator">Open</a>
+              <a class="btn" href="#" aria-label="Blog Outline Generator details">Details</a>
+            </div>
+          </div>
+        </article>
+
+      </div> <!-- .grid -->
+    </section>
+
+    <footer>
+      Static HTML — replace the '#' links with real tool URLs when integrating.
+    </footer>
+  </div>
+</body>
+</html>
